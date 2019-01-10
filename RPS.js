@@ -1,4 +1,3 @@
-
 let startBtn = document.createElement('BUTTON');
 
 let rockBtn = document.createElement('BUTTON');
@@ -25,12 +24,7 @@ document.body.appendChild(scissorsBtn);
 
 let chooseBlock = document.createElement('H1');
 
-
 let randomChoice;
-
-
-
-
 
 startBtn.onclick = function () {
   document.body.appendChild(chooseBlock);
@@ -43,7 +37,6 @@ startBtn.onclick = function () {
 
   console.log(randomChoice);
 }
-
 
 let results = document.createElement('H1');
 document.body.appendChild(results);
