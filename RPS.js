@@ -41,14 +41,13 @@ startBtn.onclick = function () {
 }
 
 function countDown() {
-  let timeLeft = 4;
+  let timeLeft = 3;
   let timeShow = document.createElement('H1');
   document.body.appendChild(timeShow);
 
 
   let countDownTimer = setInterval(function () {
     timeLeft--;
-
     timeShow.innerHTML = timeLeft;
 
     console.log(timeLeft);
@@ -56,7 +55,6 @@ function countDown() {
       clearInterval(countDownTimer);
       document.body.removeChild(timeShow);
       chooseBlock.innerHTML = 'Choose a Weapon!';
-
     }
   }, 750);
 }
