@@ -1,13 +1,7 @@
 let startBtn = document.createElement('BUTTON');
-
-
 let rockBtn = document.createElement('BUTTON');
-
 let paperBtn = document.createElement('BUTTON');
-
 let scissorsBtn = document.createElement('BUTTON');
-
-
 let startText = document.createTextNode('Play!');
 startBtn.appendChild(startText);
 
@@ -25,15 +19,11 @@ document.body.appendChild(rockBtn);
 document.body.appendChild(paperBtn);
 document.body.appendChild(scissorsBtn);
 
-
 let chooseBlock = document.createElement('H1');
-
 
 let randomChoice;
 
 startBtn.onclick = function () {
-
-
   rockBtn.id = '';
   paperBtn.id = '';
   scissorsBtn.id = '';
@@ -68,9 +58,7 @@ function countDown() {
       chooseBlock.innerHTML = 'Choose a Weapon!';
 
     }
-  }, 1000);
-
-
+  }, 750);
 }
 
 let results = document.createElement('H1');
@@ -80,6 +68,8 @@ let choice = 'Your opponent chose ';
 
 rockBtn.onclick = function () {
   rockBtn.id = 'btnPress';
+  scissorsBtn.id = '';
+  paperBtn.id = '';
   chooseBlock.innerHTML = '';
   if (randomChoice == 'Scissors') {
     results.innerHTML = 'You Win! ' + choice + 'scissors!';
@@ -92,6 +82,8 @@ rockBtn.onclick = function () {
 
 paperBtn.onclick = function () {
   paperBtn.id = 'btnPress';
+  rockBtn.id = '';
+  scissorsBtn.id = '';
   chooseBlock.innerHTML = '';
   if (randomChoice == 'Scissors') {
     results.innerHTML = 'You Lose! ' + choice + 'scissors!';
@@ -104,6 +96,8 @@ paperBtn.onclick = function () {
 
 scissorsBtn.onclick = function () {
   scissorsBtn.id = 'btnPress';
+  rockBtn.id = '';
+  paperBtn.id = '';
   chooseBlock.innerHTML = '';
   if (randomChoice == 'Scissors') {
     results.innerHTML = 'Draw! ' + choice + 'scissors!';
